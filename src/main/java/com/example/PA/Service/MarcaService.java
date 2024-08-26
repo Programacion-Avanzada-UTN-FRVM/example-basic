@@ -1,6 +1,6 @@
-package com.example.PA.Service;
+package com.example.PA.service;
 
-import com.example.PA.Repository.MarcaRepository;
+import com.example.PA.repository.MarcaRepository;
 import com.example.PA.model.Marca;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class MarcaService implements IMarcaService{
 
     @Override
     public List<Marca> listar() {
-        return modelRepository.findAll();
+        return modelRepository.findByEstado(0);
     }
 
     @Override
@@ -28,6 +28,8 @@ public class MarcaService implements IMarcaService{
 
     @Override
     public void eliminar(Marca model) {
-       modelRepository.delete(model);
+
+        model.asEliminar();
+        modelRepository.save(model);
     }
 }

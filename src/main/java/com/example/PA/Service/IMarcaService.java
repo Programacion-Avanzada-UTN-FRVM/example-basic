@@ -1,4 +1,4 @@
-package com.example.PA.Service;
+package com.example.PA.service;
 
 import com.example.PA.model.Marca;
 

@@ -1,5 +1,5 @@
-package com.example.PA.Controller;
-import com.example.PA.Service.IMarcaService;
+package com.example.PA.controller;
+import com.example.PA.service.IMarcaService;
 import com.example.PA.model.Marca;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
